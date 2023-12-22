@@ -1,0 +1,57 @@
+.app-dock {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.4);
+  justify-content: center;
+  gap: 2rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  width: fit-content;
+  width: 80%;
+  margin-left: 50%;
+  border-radius: 1rem 1rem 0 0;
+  transform: translateX(-50%);
+  overflow: visible;
+}
+
+.app-dock li {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s, margin 0.3s;
+}
+
+.badge {
+  /* border: 2px solid #161616; */
+  background-color: #1616169a;
+  padding: 10px;
+  border-radius: 8px;
+}
+/* .badge::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  bottom: -20px;
+  left: 15px;
+  position: absolute;
+  background-color: #dc461d;
+  border-radius: 50%;
+  z-index: 200;
+} */
+.app-dock li > :last-child {
+  margin-top: 1rem;
+  transform: rotatex(180deg) translatey(15px);
+  mask-image: linear-gradient(transparent 50%, white 90%);
+  -webkit-mask-image: linear-gradient(transparent 50%, white 90%);
+}
+.app-dock li:hover {
+  cursor: pointer;
+  transform: scale(1.5) translateY(-0.4rem);
+  margin-inline: 1rem;
+}
+
+.app-dock li:hover + li {
+  transform: scale(1.1);
+  margin-inline: 0.5rem;
+}
